@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SearchActivity">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="18dp"
+            android:background="@color/white"
+            android:padding="8dp"
+            android:src="@drawable/ic_orng_back" />
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toEndOf="@+id/back"
+            android:background="@null"
+
+            android:defaultFocusHighlightEnabled="false"
+            android:fontFamily="@font/roboto"
+            android:hint="Найти блюдо"
+            android:inputType="textAutoCorrect"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+
+            android:overScrollMode="ifContentScrolls"
+            android:scrollbars="horizontal"
+            android:scrollHorizontally="true"
+            android:textColor="@color/black"
+            android:textColorHighlight="#80F15412"
+            android:textColorHint="#99000000"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:id="@+id/cancel"
+            android:clickable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="18dp"
+            android:background="@color/white"
+            android:padding="8dp"
+            android:src="@drawable/ic_cancel"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/centerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/roboto"
+        android:text="Введите название блюда, \nкоторое ищете"
+        android:textAlignment="center"
+        android:textColor="#99000000"
+        android:textSize="16dp"
+        android:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recProducts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        tools:listitem="@layout/item" />
+
+</RelativeLayout>

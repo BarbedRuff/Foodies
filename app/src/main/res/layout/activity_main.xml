@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:id="@+id/main_layer"
+        android:layout_width="wrap_content"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/top"
+            layout="@layout/topline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:background="@color/white"
+            android:id="@+id/categories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top"
+            android:layout_marginTop="8dp"
+            app:tabBackground="@color/white"
+            app:tabIndicator="@drawable/ic_tab_indicator"
+            app:tabIndicatorColor="#F15412"
+            app:tabIndicatorGravity="stretch"
+            app:tabIndicatorAnimationMode="fade"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextAppearance="@style/tabText"
+            app:tabIndicatorAnimationDuration="0"
+            app:tabTextColor="#000000" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:background="@color/white"
+            android:id="@+id/products"
+            style="@style/cartEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/categories"
+            android:layout_marginTop="16dp" />
+        <RelativeLayout
+            android:id="@+id/toCart"
+            android:clickable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp">
+
+            <include
+                android:id="@+id/bottom"
+                layout="@layout/fixedbuttonprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/filter_layer"
+        android:background="@color/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bordertop">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginHorizontal="24dp"
+                android:textSize="24dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Подобрать блюда"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/filter_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="5"
+                tools:listitem="@layout/filteritem" />
+
+            <include
+                android:id="@+id/accept"
+                layout="@layout/incart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/filter_list" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
