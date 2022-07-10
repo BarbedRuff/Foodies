@@ -5,4 +5,4 @@
 # Foodies
 ## Обзор
 Foodies - android-приложение разработанное на Kotlin во время IT-марафона <a href="https://vk.com/vezdekod">Вездекод</a>.
-<p align="center"><img width=50% src="img/demo.gif"></p>
+<p align="center"><img width=30% src="img/demo.gif"></p>
