@@ -2,7 +2,12 @@
     <img src="img/Logo.svg" alt="Foodies logo" title="Foodies" align="right" height="60" />
 </a>
 
-# Foodies
+# Foodies Android app :iphone:
 ## Обзор
-Foodies - android-приложение разработанное на Kotlin во время IT-марафона <a href="https://vk.com/vezdekod">Вездекод</a>.
+Foodies - это android-приложение разработанное на Kotlin во время IT-марафона <a href="https://vk.com/vezdekod">Вездекод</a>.
 <p align="center"><img width=30% src="img/demo.gif"></p>
+
+<br>
+
+## Download
+<p align="center"><img width=20% src="img/download.png"></p>
