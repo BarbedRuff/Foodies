@@ -10,4 +10,4 @@ Foodies - это android-приложение разработанное на Ko
 <br>
 
 ## Download
-<a href="https://drive.google.com/file/d/1IbAW9XS7OCm8t2OoReef1uOBjKWPCtbT/view?usp=sharing"><p align="center"><img width=20% src="img/download.png"></p></a>
+<a href="https://drive.google.com/file/d/1IbAW9XS7OCm8t2OoReef1uOBjKWPCtbT/view?usp=sharing"><img width=20% src="img/download.png"></a>
